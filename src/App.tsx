@@ -47,16 +47,6 @@ function App() {
           <Header />
           <div className='content'>
             <Routes>
-
-              <Route
-                path='discover'
-                element={
-                  <RequireAuth>
-                    <DiscoverPage />
-                  </RequireAuth>
-                  
-                }
-              />
               <Route path='/' element={<LandingPage />} />
               <Route path='/signup' element={<SignupPage />} />
               <Route path='/login' element={<Login />} />
@@ -126,6 +116,15 @@ function App() {
                 }
               />
 
+              <Route
+                path='discover'
+                element={
+                  <RequireAuth>
+                    <DiscoverPage />
+                  </RequireAuth>
+                  
+                }
+              />
             </Routes>
             
           </div>
