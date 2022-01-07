@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom'
 import TextInput from '../../../components/form/TextInput';
 import FormField from '../../../components/form/FormField';
 import Button from '../../../components/form/Button';
@@ -81,6 +82,7 @@ margin-right:8px`;
 
 const ResetPasswordPage: React.FC = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   const [password, setPassword] = React.useState<string>('');
   const [reTypePassword, setReTypePassword] = React.useState<string>('');
   const [showPassword, setShowPassword] = React.useState<boolean>(false);
@@ -160,6 +162,7 @@ const ResetPasswordPage: React.FC = () => {
       toast.error('Passwords don\'t match');
     }else {
       setPasswordErrorAry(error);
+      navigate('/login')
       //dispatch(userResetPassword(userData));
     }
     
