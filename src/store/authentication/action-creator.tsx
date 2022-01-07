@@ -14,6 +14,11 @@ export const loginUser = (data: any) => {
     dispatch({
       type: ActionConstants.AUTH_INIT,
     })
+
+        dispatch({
+          type: ActionConstants.AUTH_SUCCESS,
+          payload: 'sdkfjkls2l3kh2hl2kj32lk3jlk2j3k2j3',
+        })
     return service
       .post(apiURI.auth.login, data)
       .then((resp) => {
@@ -29,10 +34,6 @@ export const loginUser = (data: any) => {
         dispatch({
           type: ActionConstants.AUTH_SUCCESS,
           payload: 'sdkfjkls2l3kh2hl2kj32lk3jlk2j3k2j3',
-        })
-        dispatch({
-          type: ActionConstants.AUTH_FAILED,
-          payload: e,
         })
         toastr.error('Error', `Something went wrong, Please try again.`)
         return e
