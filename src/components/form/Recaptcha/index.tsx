@@ -8,7 +8,7 @@ interface RecaptchaProps {
 const Recaptcha: React.FC<RecaptchaProps> = ({ onChange }) => {
   return (
     <GoogleRecaptcha
-      sitekey={"6LfT23MdAAAAAFJW9Wihh1BWi_FDUFAamPKCmIZP"}
+      sitekey={"6Lei9PgdAAAAADgGc8rnY9fAAE3Pxqqaq6SbiWb-"}
       onChange={onChange}
     />
   )
