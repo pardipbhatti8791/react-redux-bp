@@ -1,0 +1,338 @@
+.btnPrime {
+  clip-path: polygon(100% 5%, 100% 56%, 92% 100%, 0% 100%, 0 54%, 8% 5%);
+  background: #931a1a;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  width: 90%;
+  padding: 24px 10px;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 1px 1px 15px #fff;
+  position: relative;
+}
+.btnSave {
+  margin-top: 5rem;
+  margin-right: 25px;
+  width: auto;
+  min-width: 300px;
+  float: right;
+}
+.btnSubscribe {
+  clip-path: polygon(100% 5%, 100% 56%, 92% 100%, 0% 100%, 0 54%, 8% 5%);
+  background: #931a1a;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  width: 90%;
+  height: 70px;
+  padding: 10px;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 1px 1px 15px #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .checkIcon {
+    margin-right: 2rem;
+  }
+}
+.mainContainer {
+  width: 100%;
+  padding: 80px 5rem;
+  display: flex;
+  position: relative;
+  z-index: 2;
+  .leftSidebar {
+    border: 1px solid #de1313;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#931a1a+0,931a1a+100&0+0,1+100 */
+    background: -moz-linear-gradient(
+      45deg,
+      rgba(147, 26, 26, 0) 0%,
+      rgba(147, 26, 26, 1) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      45deg,
+      rgba(147, 26, 26, 0) 0%,
+      rgba(147, 26, 26, 1) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      45deg,
+      rgba(147, 26, 26, 0) 0%,
+      rgba(147, 26, 26, 1) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00931a1a', endColorstr='#931a1a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    ul {
+      li {
+        font-size: 24px;
+        color: #fff;
+        padding: 0px 2rem;
+        .iconHolder {
+          display: flex;
+          margin-right: 20px;
+        }
+        &.active {
+          /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#086161+0,299999+100 */
+          background: #086161; /* Old browsers */
+          background: -moz-radial-gradient(
+            center,
+            ellipse cover,
+            #086161 0%,
+            #299999 100%
+          ); /* FF3.6-15 */
+          background: -webkit-radial-gradient(
+            center,
+            ellipse cover,
+            #086161 0%,
+            #299999 100%
+          ); /* Chrome10-25,Safari5.1-6 */
+          background: radial-gradient(
+            ellipse at center,
+            #086161 0%,
+            #299999 100%
+          ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#086161', endColorstr='#299999',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        }
+        .link {
+          padding: 15px 0;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          border-bottom: 1px solid #000;
+          cursor: pointer;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .contArea {
+    padding: 2rem;
+    width: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#931a1a+0,931a1a+100&0+0,1+100 */
+    background: -moz-linear-gradient(
+      45deg,
+      rgba(147, 26, 26, 0) 0%,
+      rgba(147, 26, 26, 1) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      45deg,
+      rgba(147, 26, 26, 0) 0%,
+      rgba(147, 26, 26, 1) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      45deg,
+      rgba(147, 26, 26, 0) 0%,
+      rgba(147, 26, 26, 1) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00931a1a', endColorstr='#931a1a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    .title {
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+      .col6 {
+        width: 50%;
+        padding: 0 30px;
+        margin-top: 20px;
+        .selectPlan {
+          background: rgba(255, 255, 255, 0.5);
+          padding: 10px 20px;
+          height: 83px;
+          display: flex;
+          align-items: center;
+          position: relative;
+          justify-content: center;
+          cursor: pointer;
+          .checkIcon {
+            position: absolute;
+            left: 20px;
+            visibility: hidden;
+          }
+          &.active {
+            .checkIcon {
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+    .formData {
+      text-align: center;
+      .profileImage {
+        margin: 60px auto;
+        display: inline-block;
+        position: relative;
+        .editBtn {
+          position: absolute;
+          top: -25px;
+          right: -30px;
+          cursor: pointer;
+        }
+      }
+      .formArea {
+        .formRow {
+          display: flex;
+          margin: 0 -15px;
+          .formCol {
+            padding: 0 35px;
+            margin-bottom: 45px;
+            width: 100%;
+            position: relative;
+            .formLabel {
+              position: absolute;
+              left: 45px;
+              top: 25px;
+            }
+            .formField {
+              background: rgba(0, 0, 0, 0.5);
+              padding: 26px 10px;
+              color: #fff;
+              border: 1px solid rgba(0, 0, 0, 0.5);
+              font-family: "Orbitron", sans-serif;
+              width: 100%;
+            }
+            .formSelect {
+              background: rgba(0, 0, 0, 0.5);
+              padding: 26px 10px;
+              color: #fff;
+              border: 1px solid rgba(0, 0, 0, 0.5);
+              font-family: "Orbitron", sans-serif;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .pricingList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5rem -15px;
+    .pricingItemOuter {
+      width: 46%;
+      margin: 0 2%;
+      filter: drop-shadow(7px 7px 10px rgba(255, 255, 255, 0.3));
+      .pricingItem {
+        clip-path: polygon(0 -50px, 105% 0, 105% 85%, 90% 105%, 0 105%);
+        background: #086161;
+        text-align: center;
+        padding: 2rem 4rem 140px 4rem;
+        position: relative;
+
+        &.bgRed {
+          background: #652121;
+        }
+        .label {
+          position: relative;
+          top: -49px;
+          background: #931a1a;
+          padding: 8px 30px;
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 500;
+          border-radius: 5px;
+          display: inline-block;
+        }
+        .Price {
+          font-size: 24px;
+          color: #000;
+          font-weight: 500;
+          text-decoration: line-through;
+          &.invisible {
+            visibility: hidden;
+          }
+        }
+        .iconHolder {
+          display: flex;
+          justify-content: center;
+          margin-top: -20px;
+        }
+        .salePrice {
+          font-size: 60px;
+          color: #fff;
+          font-weight: 900;
+          display: inline-block;
+          span {
+            font-size: 12px;
+            font-weight: 700;
+            opacity: 0.5;
+            float: right;
+            position: relative;
+            top: 12px;
+          }
+        }
+        .title {
+          font-size: 32px;
+          font-weight: 900;
+          color: #fff;
+          margin: 2rem 0 3rem 0;
+        }
+        .options {
+          margin: 50px 0;
+          .optionList {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            input {
+              margin-top: 3px;
+              margin-right: 10px;
+            }
+            p {
+              opacity: 0.5;
+              color: #fff;
+            }
+          }
+        }
+        .bottomArea {
+          margin-top: auto;
+          min-height: 64px;
+          position: absolute;
+          bottom: 40px;
+          width: 100%;
+          left: 0;
+          padding: 0 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 32px;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+  .selectPlan {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    height: 83px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    cursor: pointer;
+    .checkIcon {
+      position: absolute;
+      left: 20px;
+      visibility: hidden;
+    }
+    &.active {
+      .checkIcon {
+        visibility: visible;
+      }
+    }
+  }
+}
