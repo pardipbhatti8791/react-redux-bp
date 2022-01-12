@@ -1,5 +1,5 @@
 
-export const baseUrl = 'https://dev-backend.haikupro.com/';
+export const baseUrl = '';
 
 export const apiURI = {
   auth: {

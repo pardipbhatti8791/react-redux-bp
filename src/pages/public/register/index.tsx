@@ -2,18 +2,11 @@ import * as React from 'react';
 import styled from 'styled-components';
 import PhoneNumber from 'awesome-phonenumber';
 import { useFormik } from 'formik';
-import AuthBackground from '../../../components/AuthBackground';
 import AuthContent from '../../../components/AuthContent';
-import AuthHeader from '../../../components/AuthHeader';
 import Divider from '../../../components/Divider';
 import Button from '../../../components/form/Button';
 import FormField from '../../../components/form/FormField';
 import TextInput from '../../../components/form/TextInput';
-import MediaWrapper from '../../../components/media-wrapper';
-import SocialFacebook from '../../../components/SocialMediaLogin/SocialFacebook';
-import SocialGoogle from '../../../components/SocialMediaLogin/SocialGoogle';
-import SocialLinkedin from '../../../components/SocialMediaLogin/SocialLinkedin';
-import HaikuIcon from '../../../components/svg/HaikuIcon';
 //import { userSignup } from '@root/redux/slices/signup';
 //import { SignupPostData } from '@root/redux/slices/signup/types';
 import PhoneInput from 'react-phone-input-2';
@@ -77,11 +70,6 @@ const StyledTextInput = styled(TextInput)`
   }
 `;
 
-const StyledSocialContainer = styled.div`
-  margin-bottom: 5px;
-  display: block;
-  width: 100%;
-`;
 
 const RecaptchaContainer = styled.div`
   display: flex;
@@ -95,12 +83,6 @@ const FormFieldRow = styled.div`
 const SignupPage: React.FC = () => {
   const navigate = useNavigate();
 
-  /*const SignupValidateSchema = Yup.object().shape({
-    firstName: Yup.string().required('Required'),
-    lastName: Yup.string().required('Required'),
-    email: Yup.string().email('Invalid email').required('Required'),
-    username: Yup.string().required('Required'),
-  });*/
 
   const formik = useFormik({
     initialValues: {
@@ -186,41 +168,13 @@ const SignupPage: React.FC = () => {
 
   return (
     <PageContainer>
-      <MediaWrapper />
       <SignUpContainer>
         <SignUpFormContainer>
-          <AuthHeader />
-          <AuthBackground>
             <AuthContent
               title='Welcome to Haiku Pro'
               subtitle='Sign up for an account with'
             />
             <SignUpSocialButtons>
-              <StyledSocialContainer>
-                <FormField>
-                  <Button icon={HaikuIcon} label='World of Haiku' />
-                </FormField>
-                <FormField>
-                  <SocialGoogle />
-                </FormField>
-
-                <FormField>
-                  <SocialLinkedin />
-                </FormField>
-
-                <FormField>
-                  <SocialFacebook />
-                </FormField>
-                {/*<FormField>
-                <Button icon={GoogleIcon} label="Google" />
-              </FormField>
-              <FormField>
-                <Button icon={LinkedInIcon} label="LinkedIn" />
-              </FormField>
-              <FormField>
-                <Button icon={FacebookIcon} label="Facebook" />
-              </FormField> */}
-              </StyledSocialContainer>
               <Divider text='or' />
               <StyledFormContainer>
                 <FormFieldRow>
@@ -277,13 +231,6 @@ const SignupPage: React.FC = () => {
                   )}
                 </FormField>
 
-                {/* <FormField>
-                  <TextInput
-                    label="mobile number (optional)"
-                    value={mobile}
-                    onChange={(text: string) => setMobile(text)}
-                  />
-                </FormField> */}
                 <FormField>
                   <PhoneInput
                     country={'us'}
@@ -319,7 +266,6 @@ const SignupPage: React.FC = () => {
               </StyledButtonContainer>
             </SignUpSocialButtons>
             {isRequesting ? <AuthLoader /> : null}
-          </AuthBackground>
         </SignUpFormContainer>
       </SignUpContainer>
     </PageContainer>

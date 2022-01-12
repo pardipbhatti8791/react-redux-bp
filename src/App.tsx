@@ -4,23 +4,11 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import styled from 'styled-components'
 import Login from './pages/public/login'
-import PageBg from './components/svg/PageBg'
-import Header from './components/Header'
-import Footer from './components/Footer'
 import { AuthProvider, RequireAuth } from './hoc/AuthProvider'
 import { LandingPage } from './pages/public/landing-page'
-import { Dashboard } from './pages/private/dashboard'
 import SignupPage from './pages/public/register'
-import ResetPasswordPage from './pages/public/ResetPassword'
-import PricingPage from './pages/private/Pricing'
-import PlanPage from './pages/private/Plan'
-import Setting from './pages/private/Setting'
-import Subscription from './pages/private/Subscription'
-import Integration from './pages/private/Integration'
 import Welcome from './pages/private/Welcome'
 import { Toaster } from 'react-hot-toast';
-import ConfirmPage from './pages/public/Confirm'
-import { DiscoverPage } from './pages/private/Discover'
 
 const StyledContainer = styled.div`
   display: flex;
@@ -43,24 +31,12 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <StyledContainer>
-          <PageBg />
-          <Header />
+          <h1>Header Component Will Come Here</h1>
           <div className='content'>
             <Routes>
               <Route path='/' element={<LandingPage />} />
               <Route path='/signup' element={<SignupPage />} />
               <Route path='/login' element={<Login />} />
-              <Route path='setpassword' element={<ResetPasswordPage />} />
-              <Route path='confirm' element={<ConfirmPage />} />
-              <Route
-                path='dashboard'
-                element={
-                  <RequireAuth>
-                    <Dashboard />
-                  </RequireAuth>
-                  
-                }
-              />
               <Route
                 path='welcome'
                 element={
@@ -70,65 +46,9 @@ function App() {
                   
                 }
               />
-              <Route
-                path='pricing'
-                element={
-                  <RequireAuth>
-                    <PricingPage />
-                  </RequireAuth>
-                  
-                }
-              />
-              <Route
-                path='plan'
-                element={
-                  <RequireAuth>
-                    <PlanPage />
-                  </RequireAuth>
-                  
-                }
-              />
-              <Route
-                path='setting'
-                element={
-                  <RequireAuth>
-                    <Setting />
-                  </RequireAuth>
-                  
-                }
-              />
-              <Route
-                path='subscription'
-                element={
-                  <RequireAuth>
-                    <Subscription />
-                  </RequireAuth>
-                  
-                }
-              />
-              <Route
-                path='integration'
-                element={
-                  <RequireAuth>
-                    <Integration />
-                  </RequireAuth>
-                  
-                }
-              />
-
-              <Route
-                path='discover'
-                element={
-                  <RequireAuth>
-                    <DiscoverPage />
-                  </RequireAuth>
-                  
-                }
-              />
-            </Routes>
-            
+           </Routes>            
           </div>
-          <Footer />
+          <h1>Footer Component Will Come Here</h1>
           <Toaster position="top-right" reverseOrder={false}/>
         </StyledContainer>
       </BrowserRouter>
